@@ -3,24 +3,26 @@
 >>  # **链表**
 >>> ## 链表的结构体创建
 >>>```c
->>>typedef struct node<br>
->>> {<br>
->>>	int data;<br>
->>> 	struct node *NEXT;<br>
->>> }*Link,link;```<br>
+>>>typedef struct node
+>>> {
+>>>	int data;
+>>> 	struct node *NEXT;
+>>> }*Link,link;
+>>>```
 >>> ## 链表的创建函数
 >>>```c
->>> Link createlist()<br>
->>> {<br>
->>> 	 link *L;                  //L表示表头，l表示表尾 <br>
->>> 	 L = (Link)malloc(sizeof(link));<br>
->>>	  if(!L)<br>
->>>	  {<br>
->>>	  printf("\n- - - - - WARNING- - - - - - - -\n");<br>
->>>	  printf("\n allocate memory failure!!   \n");<br>
->>>	  return 0;<br>
->>>	  }<br>
->>>   	return L;<br>
->>> }<br>
+>>> Link createlist()
+>>> {
+>>> 	 link *L;                  //L表示表头，l表示表尾 
+>>> 	 L = (Link)malloc(sizeof(link));
+>>>	  if(!L)
+>>>	  {
+>>>	  printf("\n- - - - - WARNING- - - - - - - -\n");
+>>>	  printf("\n allocate memory failure!!   \n");
+>>>	  return 0;
+>>>	  }
+>>>   	return L;
+>>> }
 >>>```
 >>> ## 链表的赋值函数
+

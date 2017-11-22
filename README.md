@@ -9,6 +9,7 @@
 >>> 	struct node *NEXT;<br>
 >>> }*Link,link;```c<br>
 >>> ## 链表的创建函数
+>>> ```c
 >>> Link createlist()<br>
 >>> {<br>
 >>> 	 link *L;                  //L表示表头，l表示表尾 <br>
@@ -21,4 +22,5 @@
 >>>	  }<br>
 >>>   	return L;<br>
 >>> }<br>
->>>## 链表的赋值函数
+>>>```c
+>>> ## 链表的赋值函数

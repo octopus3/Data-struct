@@ -87,20 +87,32 @@
 >>>	return (S->Top == -1);
 >>>}
 >>> ```
+<<<<<<< HEAD
 >>> ##判断栈是否为满的函数
+=======
+>>> ## 判断栈是否为满的函数
+>>>>>>> 2b113a434d74c31a2573ac8815b29e664471e8e4
 >>> ```c
 >>> int IsFull(Stack S)
 >>>{
 >>>	return (S->Top == S->MaxSize-1);
 >>>}
 >>> ```
+<<<<<<< HEAD
 >>> ## 出栈函数
+=======
+>>> ## 入栈函数
+>>>>>>> 2b113a434d74c31a2573ac8815b29e664471e8e4
 >>> ```c
 >>> int Push(Stack S,int x)
 >>>{
 >>>	if(S->Top == S->MaxSize-1||S->Top>S->MaxSize)//Õ»Âú
 >>>	{
+<<<<<<< HEAD
 >>>		printf("¶ÑÕ»Âú£¡");
+=======
+>>>		printf("栈堆满");
+>>>>>>> 2b113a434d74c31a2573ac8815b29e664471e8e4
 >>>		return -1;
 >>>	}
 >>>	else{
@@ -109,13 +121,21 @@
 >>>	}
 >>>}
 >>> ```
+<<<<<<< HEAD
 >>> ##入栈函数
+=======
+>>> ## 出栈函数
+>>>>>>> 2b113a434d74c31a2573ac8815b29e664471e8e4
 >>> ```c
 >>>int pop(Stack S)    //³öÕ»
 >>>{
 >>>	if(S->Top == -1)
 >>>	{
+<<<<<<< HEAD
 >>>		printf("Õ»¶ÑÎª¿Õ");
+=======
+>>>		printf("栈堆为空");
+>>>>>>> 2b113a434d74c31a2573ac8815b29e664471e8e4
 >>>		return -1;
 >>>	}
 >>>	else 
@@ -126,9 +146,15 @@
 >>> ```c
 >>>int GetOp(char *Expr, int *start, char *str)
 >>>{
+<<<<<<< HEAD
 >>>		/*´Ó*star¿ªÊ¼¶ÁÈëÏÂÒ»¸ö¶ÔÏó(²Ù×÷ÊýºÍÔËËã·û),²¢±£´æÔÚ×Ö·û´®strÖÐ*/
 >>>	int i = 0;	
 >>>	/*Ìø¹ý±í´ïÊ½Ç°¿Õ¸ñ*/
+=======
+>>>		/*从start开始读入下一个对象（操作符和运算符），并保存字符串到str中*/
+>>>	int i = 0;	
+>>>	/*跳过表达式前的空格*/
+>>>>>>> 2b113a434d74c31a2573ac8815b29e664471e8e4
 >>>	while((str[0] = Expr[(*start)++])==' ');
 >>>	while(str[i]!=' '&&str[i]!='\0')
 >>>	{
@@ -149,7 +175,11 @@
 >>> ```c
 >>> float PostfixExp(char *Expr)
 >>>{
+<<<<<<< HEAD
 >>>	//µ÷ÓÃGetOpº¯Êý¶ÁÈëºó×º±í´ïÊ½²¢ÇóÖµ
+=======
+>>>	//调用GetOp函数读入后缀表达式后求值
+>>>>>>> 2b113a434d74c31a2573ac8815b29e664471e8e4
 >>>	Stack S;
 >>>	int T;
 >>>	float Op1,Op2;
@@ -182,9 +212,15 @@
 >>>				case '+':Push(S,Op1+Op2);break;
 >>>				case '-':Push(S,Op1-Op2);break;
 >>>				case '*':Push(S,Op1*Op2);break;
+<<<<<<< HEAD
 >>>				case '/':if(Op2 != 0.0)Push(S,Op1/Op2);else {printf("ÊäÈë·ÖÄ¸Êý¾ÝÓÐÎó£¬·ÖÄ¸Ä¬ÈÏÎª1\n"),Op2=1;Push(S,Op1/Op2);}break;
 >>>				default:
 >>>				printf("Óöµ½Î´ÖªÔËËã·û");
+=======
+>>>				case '/':if(Op2 != 0.0)Push(S,Op1/Op2);else {printf("输入分母数据有误，分母默认为1\n"),Op2=1;Push(S,Op1/Op2);}break;
+>>>				default:
+>>>				printf("遇到位置运算符");
+>>>>>>> 2b113a434d74c31a2573ac8815b29e664471e8e4
 >>>				Op2 = INFINITY;
 >>>				break;
 >>>			}
